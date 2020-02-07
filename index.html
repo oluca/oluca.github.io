@@ -2,11 +2,108 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>oluca.github.io</title>
+    <title>Luca Oberhofer</title>
   </head>
+
+
+  <style>
+  body {
+    font-family: 'Lato', sans-serif;
+    }
+    .nav-button span {
+      float: right;
+    }
+
+    .overlay {
+      height: 0%;
+      width: 100%;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: rgb(0,0,0);
+      background-color: rgba(0,0,0, 0.9);
+      overflow-y: hidden;
+      transition: 0.5s;
+    }
+
+    .overlay-content {
+      position: relative;
+      top: 25%;
+      width: 100%;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .overlay a {
+      padding: 8px;
+      text-decoration: none;
+      font-size: 36px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .overlay a:hover, .overlay a:focus {
+      color: #f1f1f1;
+    }
+
+    .overlay .closebtn {
+      position: absolute;
+      top: 20px;
+      right: 45px;
+      font-size: 60px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .overlay {overflow-y: auto;}
+      .overlay a {font-size: 20px}
+      .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+      }
+    }
+    </style>
   <body>
-    <h1>Hello and welcome!</h1>
-    <p>Still on work!</p>
-    <a href="hello.html">HELLO!</a>
+    <header>
+      <div class="header-container">
+        <div class="logo-container">
+
+        </div>
+        <div class="navigation-container">
+          <nav>
+            <div id="myNav" class="overlay">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+              <div class="overlay-content">
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+              </div>
+            </div>
+            <div class="nav-button">
+              <span style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fas fa-bars"></i></span>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <footer>
+      <div class="footer-container">
+        <div class="social-container">
+          <div class="social-text">
+            <h1>Follow me</h1>
+            <hr>
+          </div>
+          <div class="social-icons">
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
